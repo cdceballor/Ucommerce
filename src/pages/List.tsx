@@ -1,8 +1,7 @@
-import { IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { americanFootball, basketball, beer, bluetooth, boat, build, flask, football, paperPlane, wifi } from 'ionicons/icons';
-import React from 'react';
+import React, { useState } from 'react'
 
-const ListPage: React.FC = () => {
+import { IonPage, IonHeader, IonToolbar, IonMenuButton, IonTitle, IonActionSheet, IonContent, IonButtons, IonButton } from '@ionic/react';
+ const List: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -10,44 +9,61 @@ const ListPage: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>List</IonTitle>
+          <IonTitle>Sellers List</IonTitle>
         </IonToolbar>
       </IonHeader>
-
       <IonContent>
-        <ListItems />
+        <MyL />
       </IonContent>
     </IonPage>
   );
 };
 
-const ListItems = () => {
-  const icons = [
-    flask,
-    wifi,
-    beer,
-    football,
-    basketball,
-    paperPlane,
-    americanFootball,
-    boat,
-    bluetooth,
-    build
-  ];
-
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(x => {
-    return (
-      <IonItem key={x}>
-        <IonIcon icon={icons[x - 1]} slot="start" />
-        Item {x}
-        <div className="item-note" slot="end">
-          This is item # {x}
-        </div>
-      </IonItem>
-    );
-  });
-
-  return <IonList>{items}</IonList>;
+  const MyL =  () => {
+    const [showActionSheet, setShowActionSheet] = useState(false);
+    return(
+    <IonContent>
+      <IonButton onClick={() => setShowActionSheet(true)} expand="block">See this seller!</IonButton>
+      <IonActionSheet
+        isOpen={showActionSheet}
+        onDidDismiss={() => setShowActionSheet(false)}
+        buttons={[{
+          text: 'Delete',
+          role: 'destructive',
+          icon: 'trash',
+          handler: () => {
+            console.log('Delete clicked');
+          }
+        }, {
+          text: 'Share',
+          icon: 'share',
+          handler: () => {
+            console.log('Share clicked');
+          }
+        }, {
+          text: 'Play (open modal)',
+          icon: 'arrow-dropright-circle',
+          handler: () => {
+            console.log('Play clicked');
+          }
+        }, {
+          text: 'Favorite',
+          icon: 'heart',
+          handler: () => {
+            console.log('Favorite clicked');
+          }
+        }, {
+          text: 'Cancel',
+          icon: 'close',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }]}
+      >
+      </IonActionSheet>
+    </IonContent>
+  );
 };
 
-export default ListPage;
+export default List;
