@@ -6,9 +6,10 @@ import { AppPage } from './declarations';
 
 import Menu from './components/Menu';
 import Home from './pages/Home';
-import List from './pages/List';
-import Men from './pages/Men';
-import { home, list, grid } from 'ionicons/icons';
+import Inventario from './pages/Inventario';
+import Servicios from './pages/Servicios';
+import Vendedores from './pages/Vendedores';
+import { home, list, people, pricetag } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,14 +37,19 @@ const appPages: AppPage[] = [
     icon: home
   },
   {
-    title: 'List',
-    url: '/home/list',
+    title: 'Inventario',
+    url: '/home/inventario',
     icon: list
   },
   {
-    title: 'Men',
-    url: '/home/men',
-    icon: grid
+    title: 'Vendedores',
+    url: '/home/vendedores',
+    icon: pricetag
+  },
+  {
+    title: 'Servicios',
+    url: '/home/servicios',
+    icon: people
   }
 ];
 
@@ -54,8 +60,9 @@ const App: React.FC = () => (
         <Menu appPages={appPages} />
         <IonRouterOutlet id="main">
           <Route path="/home" component={Home} exact={true} />
-          <Route path="/home/list" component={List} exact={true} />
-          <Route path="/home/men" component={Men} exact={true} />
+          <Route path="/home/vendedores" component={Vendedores} exact={true} />
+          <Route path="/home/inventario" component={Inventario} exact={true} />
+          <Route path="/home/servicios" component={Servicios} exact={true} />
           <Route path="/" render={() => <Redirect to="/home"/> } exact={true} />
         </IonRouterOutlet>
       </IonSplitPane>
