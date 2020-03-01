@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import Inventario from './pages/Inventario';
 import Servicios from './pages/Servicios';
 import Vendedores from './pages/Vendedores';
-import { home, list, people, pricetag } from 'ionicons/icons';
+import { home, list, people, pricetag, bookmark } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';

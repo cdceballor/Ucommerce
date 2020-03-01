@@ -1,6 +1,10 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader, IonButton  } from '@ionic/react';
 
+import ActiveBotton from '../components/ActiveBotton';
+import InActiveBotton from '../components/InActiveBotton';
+
+
 const Vendedores: React.FC = () => {
     return (
       <IonPage>
@@ -8,6 +12,8 @@ const Vendedores: React.FC = () => {
           <IonToolbar>
             <IonButtons slot="start">
               <IonMenuButton />
+              <ActiveBotton />
+              <InActiveBotton />
             </IonButtons>
             <IonTitle>Vendedores</IonTitle>
           </IonToolbar>
@@ -29,27 +35,27 @@ const Vendedor = ()=> {
     <IonList>
       <IonItem>
         <IonLabel>Cristian D. Ceballos</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        < ActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Mateo Sánchez Toro</IonLabel>
-        <IonButton color="danger">Inactivo </IonButton>
+        <InActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Nicolás Roldán</IonLabel>
-        <IonButton color="danger">Inactivo </IonButton>
+        <InActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Paola Vallejo</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <ActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Super Mario Bros</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <ActiveBotton />
       </IonItem>
     </IonList>
 
@@ -59,7 +65,6 @@ const Vendedor = ()=> {
   <IonListHeader>
     <IonLabel>Nombre del producto</IonLabel>
   </IonListHeader>
-
   <IonItem>
     <IonLabel>Papas</IonLabel>
     <IonRadio slot="start" value="biff" />
