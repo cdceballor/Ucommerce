@@ -1,61 +1,56 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader, IonButton  } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
+import Agenda from '../../components/Agenda';
 
-import ActiveBotton from '../components/ActiveBotton';
-import InActiveBotton from '../components/InActiveBotton';
-
-
-const Vendedores: React.FC = () => {
+const Servicios: React.FC = () => {
     return (
       <IonPage>
         <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
               <IonMenuButton />
-              <ActiveBotton />
-              <InActiveBotton />
             </IonButtons>
-            <IonTitle>Vendedores</IonTitle>
+            <IonTitle>Servicios</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <Vendedor />
+          <Servidores />
         </IonContent>
       </IonPage>
     );
   };
 
-const Vendedor = ()=> {
+const Servidores = ()=> {
   return (
   <IonContent>
     {/*-- List of Text Items --*/}
     <IonListHeader>
-      <IonLabel>Nombre del Vendedor</IonLabel>
+      <IonLabel>Nombre del Proveedor de servicio</IonLabel>
     </IonListHeader>
     <IonList>
       <IonItem>
         <IonLabel>Cristian D. Ceballos</IonLabel>
-        < ActiveBotton />
+        <IonButton color="primary">Activo </IonButton>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Mateo Sánchez Toro</IonLabel>
-        <InActiveBotton />
+        <IonButton color="primary">Activo </IonButton>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Nicolás Roldán</IonLabel>
-        <InActiveBotton />
+        <IonButton color="primary">Activo </IonButton>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Paola Vallejo</IonLabel>
-        <ActiveBotton />
+        <IonButton color="primary">Activo </IonButton>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Super Mario Bros</IonLabel>
-        <ActiveBotton />
+        <IonButton color="danger">Inactivo </IonButton>
       </IonItem>
     </IonList>
 
@@ -63,38 +58,39 @@ const Vendedor = ()=> {
     <IonList>
 <IonRadioGroup value="biff">
   <IonListHeader>
-    <IonLabel>Nombre del producto</IonLabel>
+    <IonLabel>Tipo de servicio</IonLabel>
   </IonListHeader>
+
   <IonItem>
-    <IonLabel>Papas</IonLabel>
+    <IonLabel>Monitorías de cálculo</IonLabel>
     <IonRadio slot="start" value="biff" />
   </IonItem>
 
   <IonItem>
-    <IonLabel>Mango</IonLabel>
+    <IonLabel>Monitorías de lógica</IonLabel>
     <IonRadio slot="start" value="griff" />
   </IonItem>
 
   <IonItem>
-    <IonLabel>Golosinas</IonLabel>
+    <IonLabel>Monitorías de cálculo</IonLabel>
     <IonRadio slot="start" value="buford" />
   </IonItem>
 </IonRadioGroup>
 {/*--------------------------------------------------------------*/}
       <IonItem>
-        <IonLabel>Chocolatinas</IonLabel>
+        <IonLabel>Monitorías de citación</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
       <IonItem>
-        <IonLabel>Galletas</IonLabel>
+        <IonLabel>Monitorías de Proyecto integrador 1</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
       <IonItem>
-        <IonLabel>Chicles</IonLabel>
+        <IonLabel>Monitorías de física II</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
       <IonItem>
-        <IonLabel>Sanduches</IonLabel>
+        <IonLabel>Monitorías de natación</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
     </IonList>
@@ -117,4 +113,4 @@ const Vendedor = ()=> {
 );
 }
 
-export default Vendedores;
+export default Servicios;

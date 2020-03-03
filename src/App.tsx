@@ -1,16 +1,17 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
+import {
+  IonApp,
+  IonIcon,
+  IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs
+} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { AppPage } from './declarations';
-
-import Menu from './components/Menu';
-import Home from './pages/Home';
-import Inventario from './pages/Inventario';
-import Servicios from './pages/Servicios';
-import Vendedores from './pages/Vendedores';
-import Productos from './pages/Productos';
-import { home, list, people, pricetag, bookmark } from 'ionicons/icons';
+import {square} from 'ionicons/icons';
+import Home from './pages/Home/Home'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,52 +31,42 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import { cafe } from 'ionicons/icons';
-
-const appPages: AppPage[] = [
-  {
-    title: 'Home',
-    url: '/home',
-    icon: home
-  },
-  {
-    title: 'Inventario',
-    url: '/home/inventario',
-    icon: list
-  },
-  {
-    title: 'Vendedores',
-    url: '/home/vendedores',
-    icon: cafe
-  },
-  {
-    title: 'Productos',
-    url: '/home/Productos',
-    icon: pricetag
-  },
-  {
-    title: 'Servicios',
-    url: '/home/servicios',
-    icon: people
-  }
-];
+import Productos from './pages/Productos/Productos';
+import Servicios from './pages/Servicios/Servicios';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonSplitPane contentId="main">
-        <Menu appPages={appPages} />
-        <IonRouterOutlet id="main">
-          <Route path="/home" component={Home} exact={true} />
-          <Route path="/home/vendedores" component={Vendedores} exact={true} />
-          <Route path="/home/inventario" component={Inventario} exact={true} />
-          <Route path="/home/servicios" component={Servicios} exact={true} />
-          <Route path="/home/Productos" component={Productos} exact={true} />
-          <Route path="/" render={() => <Redirect to="/home"/> } exact={true} />
+      <IonTabs>
+        <IonRouterOutlet>
+          <Route path="/tab1" component={Home} exact={true} />
+          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/tab2" component={Productos} exact={true} />
+          <Route path="/" render={() => <Redirect to="/tab2" />} exact={true} />
+          <Route path="/tab3" component={Servicios} exact={true} />
+          <Route path="/" render={() => <Redirect to="/tab3" />} exact={true} />
         </IonRouterOutlet>
-      </IonSplitPane>
+        
+        <IonTabBar slot="bottom">
+
+          <IonTabButton tab="tab1" href="/tab1">
+            <IonIcon icon={square} />
+            <IonLabel>Home</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab2" href="/tab2">
+            <IonIcon icon={square} />
+            <IonLabel>Productos</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab3" href="/tab3">
+            <IonIcon icon={square} />
+            <IonLabel>Servicios</IonLabel>
+          </IonTabButton>
+
+        </IonTabBar>
+      </IonTabs>
     </IonReactRouter>
   </IonApp>
 );
 
 export default App;
+

@@ -20,8 +20,8 @@ import {
   } from '@ionic/react';
 
 //import { book, build, colorFill, grid } from 'ionicons/icons';
-import Button from '../components/Button';
-import Search from '../components/Search';
+import Button from '../../components/Button';
+import Search from '../../components/Search';
 
 import React from 'react';
 import './Home.css';

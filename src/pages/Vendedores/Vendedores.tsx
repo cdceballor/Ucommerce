@@ -1,56 +1,61 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
-import Agenda from '../components/Agenda';
+import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader, IonButton  } from '@ionic/react';
 
-const Servicios: React.FC = () => {
+import ActiveBotton from '../../components/ActiveBotton';
+import InActiveBotton from '../../components/InActiveBotton';
+
+
+const Vendedores: React.FC = () => {
     return (
       <IonPage>
         <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
               <IonMenuButton />
+              <ActiveBotton />
+              <InActiveBotton />
             </IonButtons>
-            <IonTitle>Servicios</IonTitle>
+            <IonTitle>Vendedores</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <Servidores />
+          <Vendedor />
         </IonContent>
       </IonPage>
     );
   };
 
-const Servidores = ()=> {
+const Vendedor = ()=> {
   return (
   <IonContent>
     {/*-- List of Text Items --*/}
     <IonListHeader>
-      <IonLabel>Nombre del Proveedor de servicio</IonLabel>
+      <IonLabel>Nombre del Vendedor</IonLabel>
     </IonListHeader>
     <IonList>
       <IonItem>
         <IonLabel>Cristian D. Ceballos</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        < ActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Mateo Sánchez Toro</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <InActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Nicolás Roldán</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <InActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Paola Vallejo</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <ActiveBotton />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Super Mario Bros</IonLabel>
-        <IonButton color="danger">Inactivo </IonButton>
+        <ActiveBotton />
       </IonItem>
     </IonList>
 
@@ -58,39 +63,38 @@ const Servidores = ()=> {
     <IonList>
 <IonRadioGroup value="biff">
   <IonListHeader>
-    <IonLabel>Tipo de servicio</IonLabel>
+    <IonLabel>Nombre del producto</IonLabel>
   </IonListHeader>
-
   <IonItem>
-    <IonLabel>Monitorías de cálculo</IonLabel>
+    <IonLabel>Papas</IonLabel>
     <IonRadio slot="start" value="biff" />
   </IonItem>
 
   <IonItem>
-    <IonLabel>Monitorías de lógica</IonLabel>
+    <IonLabel>Mango</IonLabel>
     <IonRadio slot="start" value="griff" />
   </IonItem>
 
   <IonItem>
-    <IonLabel>Monitorías de cálculo</IonLabel>
+    <IonLabel>Golosinas</IonLabel>
     <IonRadio slot="start" value="buford" />
   </IonItem>
 </IonRadioGroup>
 {/*--------------------------------------------------------------*/}
       <IonItem>
-        <IonLabel>Monitorías de citación</IonLabel>
+        <IonLabel>Chocolatinas</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
       <IonItem>
-        <IonLabel>Monitorías de Proyecto integrador 1</IonLabel>
+        <IonLabel>Galletas</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
       <IonItem>
-        <IonLabel>Monitorías de física II</IonLabel>
+        <IonLabel>Chicles</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
       <IonItem>
-        <IonLabel>Monitorías de natación</IonLabel>
+        <IonLabel>Sanduches</IonLabel>
         <IonCheckbox slot="start" />
       </IonItem>
     </IonList>
@@ -113,4 +117,4 @@ const Servidores = ()=> {
 );
 }
 
-export default Servicios;
+export default Vendedores;
