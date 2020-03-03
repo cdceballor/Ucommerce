@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Inventario from './pages/Inventario';
 import Servicios from './pages/Servicios';
 import Vendedores from './pages/Vendedores';
+import Productos from './pages/Productos';
 import { home, list, people, pricetag, bookmark } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -29,6 +30,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { cafe } from 'ionicons/icons';
 
 const appPages: AppPage[] = [
   {
@@ -44,6 +46,11 @@ const appPages: AppPage[] = [
   {
     title: 'Vendedores',
     url: '/home/vendedores',
+    icon: cafe
+  },
+  {
+    title: 'Productos',
+    url: '/home/Productos',
     icon: pricetag
   },
   {
@@ -63,6 +70,7 @@ const App: React.FC = () => (
           <Route path="/home/vendedores" component={Vendedores} exact={true} />
           <Route path="/home/inventario" component={Inventario} exact={true} />
           <Route path="/home/servicios" component={Servicios} exact={true} />
+          <Route path="/home/Productos" component={Productos} exact={true} />
           <Route path="/" render={() => <Redirect to="/home"/> } exact={true} />
         </IonRouterOutlet>
       </IonSplitPane>
