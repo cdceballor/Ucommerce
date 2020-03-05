@@ -13,6 +13,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import {square} from 'ionicons/icons';
 
 
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -34,7 +35,7 @@ import './theme/variables.css';
 
 /* Views */
 import Home from './pages/Home/Home'
-import Productos from './pages/Productos/Productos';
+import Products from './pages/Products/Products';
 import Service from './pages/Service/Service';
 import Seller from './pages/Seller/Seller';
 
@@ -44,7 +45,7 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/Home" component={Home} exact={true} />
-          <Route path="/Productos" component={Productos} exact={true} />
+          <Route path="/Products" component={Products} exact={true} />
           <Route path="/Service" component={Service} exact={true} />
           <Route path="/Seller" component={Seller} exact={true} />
           <Route path="/" render={() => <Redirect to="/Home" />} exact={true} />
@@ -57,9 +58,9 @@ const App: React.FC = () => (
             <IonLabel>Home</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab2" href="/Productos">
+          <IonTabButton tab="tab2" href="/Products">
             <IonIcon icon={square} />
-            <IonLabel>Productos</IonLabel>
+            <IonLabel>Products</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="tab3" href="/Service">

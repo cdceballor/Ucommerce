@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonItem, IonLabel, IonDatetime, IonContent, IonText, IonPage } from '@ionic/react';
 
-    const Productos: React.FC = () => {
+    const Products: React.FC = () => {
         return (
         <IonPage>
             <IonContent>
@@ -11,4 +11,4 @@ import { IonItem, IonLabel, IonDatetime, IonContent, IonText, IonPage } from '@i
 
 );
 }
-export default Productos;
+export default Products;
