@@ -32,6 +32,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import './App.css'
 
 /* Views */
 import Home from './pages/Home/Home'
@@ -53,7 +54,7 @@ const App: React.FC = () => (
         
 
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/Home">
+          <IonTabButton tab="tab1" href="/Home" className="style">
             <IonIcon icon={square} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonSearchbar, IonCard, IonGrid, IonRow, IonCol, IonIcon, IonRouterLink, IonButton} from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonSearchbar, IonCard, IonGrid, IonRow, IonCol, IonIcon, IonRouterLink, IonButton, IonLabel } from '@ionic/react';
 import './Home.css';
 
 
@@ -21,20 +21,22 @@ const Home: React.FC = () => {
                 <IonGrid >
                     <IonRow>
                         <IonCol>    
-                            <IonButton className="Servicios" expand="block" fill="outline">
+                            <IonButton className="Button" expand="block" color="light">
                                 Servicios
                             </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton className="Productos" expand="block" fill="outline">
+                            <IonButton className="Button" expand="block"  color="light">
                                 Productos
                             </IonButton>
                         </IonCol>
                     </IonRow>
 
-                    <IonRow>
-                        <IonCol>
-                            Destacados
+                    <IonRow> 
+                        <IonCol className="label">
+                            <IonLabel color="light">
+                                Destacados
+                            </IonLabel>
                         </IonCol>
                     </IonRow>
 
