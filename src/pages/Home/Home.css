@@ -1,5 +1,33 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
-
+.center{
+  margin: 0 auto;
+  display: block;
+  width: 50%;
 }
+.options{
+  
+}
+.logo {
+  width: 5em;
+  height: 5em;
+  display: block;
+  margin: 0 auto;
+  color: black;
+}
+.my-searchbar{
+  width: 50%;
+}
+ion-card{
+  color: black;
+  text-align: center;
+  background: white;
+  border-radius: 0%;
+}
+ion-title{
+  text-align: center;
+  color: white;
+  background: #0cd1e8;
+}
+ion-toolbar{
+  margin-top: 20px;
+}
+

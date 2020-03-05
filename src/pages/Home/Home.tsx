@@ -1,65 +1,45 @@
-import {
-  IonButtons,
-  //IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  //IonCardSubtitle,
-  IonCardTitle,
-  IonContent,
-  IonHeader,
-  //IonIcon,
-  //IonItem,
-  //IonLabel,
-  //IonList,
-  //IonListHeader,
-  IonMenuButton,
-  IonPage,
-  IonTitle,
-  IonToolbar
-  } from '@ionic/react';
-
-//import { book, build, colorFill, grid } from 'ionicons/icons';
-import Button from '../../components/Button';
-import Search from '../../components/Search';
-
 import React from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonSearchbar, IonCard, IonGrid, IonRow, IonCol, IonIcon, IonRouterLink} from '@ionic/react';
 import './Home.css';
 
-const HomePage: React.FC = () => {
-  return (
+
+
+const Home: React.FC = () => {
+    return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle><i>Home</i></IonTitle>
-        </IonToolbar>
+        <IonContent color="primary">
+            <IonHeader >
+                <IonTitle>uCommerce</IonTitle>
+            </IonHeader>
 
-        <Search/>
+            <IonSearchbar className="my-searchbar center">
+            
+            </IonSearchbar>   
+            
+            <IonCard className="center" color="secondary">
+                <IonGrid >
+                    <IonRow>
+                        <IonCol className="options">
+                            Servicios
+                        </IonCol>
+                        <IonCol className="options">
+                            Productos
+                        </IonCol>
+                    </IonRow>
 
-      </IonHeader>
-      <IonContent>
+                    <IonRow>
+                        <IonCol>
+                            Destacados
+                        </IonCol>
+                    </IonRow>
 
 
-        <IonCard className="welcome-card">
-          <img src="/assets/ucommerce.png" alt=""/>
-          <IonCardHeader>
-            <IonCardTitle><i>Bienvenido a Ucommerce</i></IonCardTitle>
-          </IonCardHeader>
-          <IonCardContent>
-            <p>
-              <i>Disfruta</i>
-            </p>
-          </IonCardContent>
-        </IonCard>
+                </IonGrid> 
+            </IonCard>
 
-        <Button />
-
-      </IonContent>
+        </IonContent>
     </IonPage>
-  );
+    );
 };
 
-export default HomePage;
+export default Home;
