@@ -35,8 +35,8 @@ import './theme/variables.css';
 /* Views */
 import Home from './pages/Home/Home'
 import Productos from './pages/Productos/Productos';
-import Servicios from './pages/Servicios/Servicios';
-import Vendedores from './pages/Vendedores/Vendedores';
+import Service from './pages/Service/Service';
+import Seller from './pages/Seller/Seller';
 
 const App: React.FC = () => (
   <IonApp>
@@ -45,8 +45,8 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/Home" component={Home} exact={true} />
           <Route path="/Productos" component={Productos} exact={true} />
-          <Route path="/Servicios" component={Servicios} exact={true} />
-          <Route path="/Vendedores" component={Vendedores} exact={true} />
+          <Route path="/Service" component={Service} exact={true} />
+          <Route path="/Seller" component={Seller} exact={true} />
           <Route path="/" render={() => <Redirect to="/Home" />} exact={true} />
         </IonRouterOutlet>
         
@@ -62,14 +62,14 @@ const App: React.FC = () => (
             <IonLabel>Productos</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab3" href="/Servicios">
+          <IonTabButton tab="tab3" href="/Service">
             <IonIcon icon={square} />
-            <IonLabel>Servicios</IonLabel>
+            <IonLabel>Service</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab4" href="/Vendedores">
+          <IonTabButton tab="tab4" href="/seller">
             <IonIcon icon={square} />
-            <IonLabel>Vendedores</IonLabel>
+            <IonLabel>Sellers</IonLabel>
 
           </IonTabButton>
         </IonTabBar>
