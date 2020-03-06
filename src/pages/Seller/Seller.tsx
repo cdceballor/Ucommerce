@@ -15,7 +15,7 @@ const Seller: React.FC = () => {
               <ActiveBotton />
               <InActiveBotton />
             </IonButtons>
-            <IonTitle>seller</IonTitle>
+            <IonTitle>Seller</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
@@ -56,46 +56,6 @@ const Vendedor = ()=> {
       <IonItem>
         <IonLabel>Super Mario Bros</IonLabel>
         <ActiveBotton />
-      </IonItem>
-    </IonList>
-
-    {/*-- List of Input Items --*/}
-    <IonList>
-<IonRadioGroup value="biff">
-  <IonListHeader>
-    <IonLabel>Nombre del producto</IonLabel>
-  </IonListHeader>
-  <IonItem>
-    <IonLabel>Papas</IonLabel>
-    <IonRadio slot="start" value="biff" />
-  </IonItem>
-
-  <IonItem>
-    <IonLabel>Mango</IonLabel>
-    <IonRadio slot="start" value="griff" />
-  </IonItem>
-
-  <IonItem>
-    <IonLabel>Golosinas</IonLabel>
-    <IonRadio slot="start" value="buford" />
-  </IonItem>
-</IonRadioGroup>
-{/*--------------------------------------------------------------*/}
-      <IonItem>
-        <IonLabel>Chocolatinas</IonLabel>
-        <IonCheckbox slot="start" />
-      </IonItem>
-      <IonItem>
-        <IonLabel>Galletas</IonLabel>
-        <IonCheckbox slot="start" />
-      </IonItem>
-      <IonItem>
-        <IonLabel>Chicles</IonLabel>
-        <IonCheckbox slot="start" />
-      </IonItem>
-      <IonItem>
-        <IonLabel>Sanduches</IonLabel>
-        <IonCheckbox slot="start" />
       </IonItem>
     </IonList>
 {/*--------------------------------------------------------------*/}

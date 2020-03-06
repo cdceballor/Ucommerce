@@ -8,13 +8,13 @@ const Products: React.FC = () => {
         <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
-              <IonMenuButton />
+              <IonMenuButton/>
             </IonButtons>
                 <IonTitle>uCommerce</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <Servidores />
+          <Servidores/>
         </IonContent>
       </IonPage>
     );
