@@ -2,7 +2,7 @@ import React from 'react';
 import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader, IonButton  } from '@ionic/react';
 
 import ActiveBotton from '../../components/ActiveBotton';
-import InActiveBotton from '../../components/InActiveBotton';
+import Alert from '../../components/Alert';
 
 
 const Seller: React.FC = () => {
@@ -13,7 +13,8 @@ const Seller: React.FC = () => {
             <IonButtons slot="start">
               <IonMenuButton />
               <ActiveBotton />
-              <InActiveBotton />
+              <Alert />
+
             </IonButtons>
             <IonTitle>Seller</IonTitle>
           </IonToolbar>
@@ -40,12 +41,12 @@ const Vendedor = ()=> {
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Mateo Sánchez Toro</IonLabel>
-        <InActiveBotton />
+        <Alert />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Nicolás Roldán</IonLabel>
-        <InActiveBotton />
+        <Alert />
       </IonItem>
       <IonInput></IonInput>
       <IonItem>

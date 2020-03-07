@@ -1,6 +1,7 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
 import Agenda from '../../components/Agenda';
+import Alert from '../../components/Alert';
 
 const Service: React.FC = () => {
     return (

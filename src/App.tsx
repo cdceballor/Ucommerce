@@ -11,9 +11,6 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import {square} from 'ionicons/icons';
-
-
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -51,7 +48,7 @@ const App: React.FC = () => (
           <Route path="/Seller" component={Seller} exact={true} />
           <Route path="/" render={() => <Redirect to="/Home" />} exact={true} />
         </IonRouterOutlet>
-        
+
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/Home" className="style">
@@ -82,4 +79,3 @@ const App: React.FC = () => (
 );
 
 export default App;
-

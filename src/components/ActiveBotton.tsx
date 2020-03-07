@@ -19,40 +19,21 @@ const Activo: React.FC = () => {
     <IonContent>
       <IonButton onClick={() => setShowActionSheet(true)} expand="block" mode ="ios">Activo</IonButton>
       <IonActionSheet
-
         isOpen={showActionSheet}
         onDidDismiss={() => setShowActionSheet(false)}
         buttons={[{
-          text: 'Delete',
-          role: 'destructive',
+          text: 'Comunicarte con el vendedor',
+          role: 'comunicate',
           icon: 'trash',
           handler: () => {
-            console.log('Delete clicked');
+            console.log('Abrir tal vez un chat');
           }
         }, {
-          text: 'Share',
+          text: 'Ubícame',
           icon: 'share',
           handler: () => {
-            console.log('Share clicked');
-          }
-        }, {
-          text: 'Play (open modal)',
-          icon: 'arrow-dropright-circle',
-          handler: () => {
-            console.log('Play clicked');
-          }
-        }, {
-          text: 'Favorite',
-          icon: 'heart',
-          handler: () => {
-            console.log('Favorite clicked');
-          }
-        }, {
-          text: 'Cancel',
-          icon: 'close',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
+            console.log('Abrir el mapa donde anda');
+
           }
         }]}
       >
