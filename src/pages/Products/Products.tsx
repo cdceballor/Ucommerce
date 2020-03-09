@@ -1,63 +1,74 @@
-import React from 'react';
-import { IonList, IonItem, IonLabel, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
+import React from "react";
+import {
+  IonList,
+  IonItem,
+  IonLabel,
+  IonContent,
+  IonRadioGroup,
+  IonListHeader,
+  IonPage,
+  IonTitle,
+  IonHeader,
+  IonButton
+} from "@ionic/react";
 
 const availableProducts = [
-  'Mango biche',
-  'Gomitas',
-  'Burbujas jet',
-  'Chicles',
-  'Chepe patatas',
-  'Bombones'
-]
+  "Mango biche",
+  "Gomitas",
+  "Burbujas jet",
+  "Chicles",
+  "Chepe patatas",
+  "Bombones"
+];
 
 const Products: React.FC = () => {
-    return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuButton/>
-            </IonButtons>
-                <IonTitle>uCommerce</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent>
-          <Servidores/>
-        </IonContent>
-      </IonPage>
-    );
-  };
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonTitle>uCommerce</IonTitle>
+      </IonHeader>
+      <IonContent>
+        <Servidores />
+      </IonContent>
+    </IonPage>
+  );
+};
 
 const Servidores = () => {
-  console.log(availableProducts)
+  console.log(availableProducts);
   return (
     <IonContent>
       <IonButton className="label" expand="full" color="secondary">
-          Products
+        Products
       </IonButton>
-      <ProductList/>        
+      <ProductList />
     </IonContent>
   );
-}
+};
 
 const ProductList = () => {
-  {/*-- List of Input Items --*/}
-  return <IonList>
+  {
+    /*-- List of Input Items --*/
+  }
+  return (
+    <IonList>
       <IonRadioGroup slot="start" value="biff">
         <IonListHeader>
           <IonLabel>Productos Disponibles</IonLabel>
         </IonListHeader>
-        {
-          availableProducts.map((name) => {
-              return <IonItem>
-                <IonLabel>{name}</IonLabel>
-                <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
-              </IonItem>
-            }
-          )
-        }
+        {availableProducts.map(name => {
+          return (
+            <IonItem>
+              <IonLabel>{name}</IonLabel>
+              <IonButton color="tertiary" href="/Seller">
+                ¡Quiero este Producto!
+              </IonButton>
+            </IonItem>
+          );
+        })}
       </IonRadioGroup>
-  </IonList>
-}
+    </IonList>
+  );
+};
 
 export default Products;

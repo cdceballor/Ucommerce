@@ -1,52 +1,56 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonSearchbar, IonCard, IonGrid, IonRow, IonCol, IonIcon, IonRouterLink, IonButton, IonLabel } from '@ionic/react';
-import './Home.css';
-
-
-
+import React from "react";
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonSearchbar,
+  IonCard,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonIcon,
+  IonRouterLink,
+  IonButton,
+  IonLabel
+} from "@ionic/react";
+import "./Home.css";
 
 const Home: React.FC = () => {
-    return (
+  return (
     <IonPage>
-        <IonContent color="primary">
-            <IonHeader >
-                <IonTitle>uCommerce</IonTitle>
-            </IonHeader>
+      <IonContent color="primary">
+        <IonHeader>
+          <IonTitle>uCommerce</IonTitle>
+        </IonHeader>
 
-            <IonSearchbar className="my-searchbar center">
-            
-            </IonSearchbar>   
-            
-            <IonCard className="center" color="secondary">
-                <IonGrid >
-                    <IonRow>
-                        <IonCol>    
-                            <IonButton className="Button" expand="block" color="light">
-                                Servicios
-                            </IonButton>
-                        </IonCol>
-                        <IonCol>
-                            <IonButton className="Button" expand="block"  color="light">
-                                Productos
-                            </IonButton>
-                        </IonCol>
-                    </IonRow>
+        <IonSearchbar className="my-searchbar center"></IonSearchbar>
 
-                    <IonRow> 
-                        <IonCol className="label">
-                            <IonLabel color="light">
-                                Destacados
-                            </IonLabel>
-                        </IonCol>
-                    </IonRow>
+        <IonCard className="center" color="secondary">
+          <IonGrid>
+            <IonRow>
+              <IonCol>
+                <IonButton className="Button" expand="block" color="light">
+                  Servicios
+                </IonButton>
+              </IonCol>
+              <IonCol>
+                <IonButton className="Button" expand="block" color="light">
+                  Productos
+                </IonButton>
+              </IonCol>
+            </IonRow>
 
-
-                </IonGrid> 
-            </IonCard>
-
-        </IonContent>
+            <IonRow>
+              <IonCol className="label">
+                <IonLabel color="light">Destacados</IonLabel>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonCard>
+      </IonContent>
     </IonPage>
-    );
+  );
 };
 
 export default Home;
