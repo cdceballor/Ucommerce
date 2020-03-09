@@ -25,12 +25,12 @@ ion-card{
 ion-title{
   text-align: center;
   color: white;
-  background: #0cd1e8;
+  background: #216353;
 }
 ion-toolbar{
   margin-top: 20px;
 }
 
 .label{
-  background: #707070;
+  background: #216353;
 }

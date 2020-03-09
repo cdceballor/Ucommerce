@@ -9,15 +9,7 @@ const Seller: React.FC = () => {
     return (
       <IonPage>
         <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuButton />
-              <ActiveBotton />
-              <Alert />
-
-            </IonButtons>
-            <IonTitle>Seller</IonTitle>
-          </IonToolbar>
+          <IonTitle>uCommerce</IonTitle>
         </IonHeader>
         <IonContent>
           <Vendedor />
@@ -30,9 +22,6 @@ const Vendedor = ()=> {
   return (
   <IonContent>
     {/*-- List of Text Items --*/}
-    <IonListHeader>
-      <IonLabel>Nombre del Vendedor</IonLabel>
-    </IonListHeader>
     <IonList>
       <IonItem>
         <IonLabel>Cristian D. Ceballos</IonLabel>
