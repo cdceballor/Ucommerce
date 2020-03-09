@@ -1,6 +1,5 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
-import Agenda from '../../components/Agenda';
 
 const availableProducts = [
   'Mango biche',
@@ -33,16 +32,16 @@ const Servidores = () => {
   console.log(availableProducts)
   return (
     <IonContent>
-      {/*-- List of Input Items --*/}
-    <IonButton className="label" expand="full" color="secondary">
-        Products
-    </IonButton>
+      <IonButton className="label" expand="full" color="secondary">
+          Products
+      </IonButton>
       <ProductList/>        
     </IonContent>
   );
 }
 
 const ProductList = () => {
+  {/*-- List of Input Items --*/}
   return <IonList>
       <IonRadioGroup slot="start" value="biff">
         <IonListHeader>

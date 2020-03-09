@@ -7,7 +7,7 @@ const Alert: React.FC = () => {
 
     return (
       <IonContent>
-        <IonButton onClick={() => setInactive(true)} expand="block">Inactivo</IonButton>
+        <IonButton onClick={() => setInactive(true)} expand="block" color="danger">Inactivo</IonButton>
 
         <IonAlert
           isOpen={showInactive}
