@@ -1,6 +1,15 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
 import Agenda from '../../components/Agenda';
+
+const availableProducts = [
+  'Mango biche',
+  'Gomitas',
+  'Burbujas jet',
+  'Chicles',
+  'Chepe patatas',
+  'Bombones'
+]
 
 const Products: React.FC = () => {
     return (
@@ -20,58 +29,36 @@ const Products: React.FC = () => {
     );
   };
 
-const Servidores = ()=> {
+const Servidores = () => {
+  console.log(availableProducts)
   return (
-  <IonContent>
-     {/*-- List of Input Items --*/}
-  <IonButton className="label" expand="full" color="secondary">
-      Products
-  </IonButton>
-    <IonList>
-<IonRadioGroup slot="start" value="biff">
-  <IonListHeader>
-    <IonLabel>Productos Disponibles</IonLabel>
-  </IonListHeader>
+    <IonContent>
+      {/*-- List of Input Items --*/}
+    <IonButton className="label" expand="full" color="secondary">
+        Products
+    </IonButton>
+      <ProductList/>        
+    </IonContent>
+  );
+}
 
-  <IonItem>
-    <IonLabel>Mango biche</IonLabel>
-    <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
-    {/* <IonRadio slot="start" value="biff" color="tertiary" /> */}
-  </IonItem>
-
-  <IonItem>
-    <IonLabel>Gomitas</IonLabel>
-    <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
-    {/* <IonRadio slot="start" value="griff" color="tertiary"/> */}
-  </IonItem>
-
-  <IonItem>
-    <IonLabel>Burbujas Jet</IonLabel>
-    <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
-    {/* <IonRadio slot="start" value="buford" color="tertiary"/> */}
-  </IonItem>
-
-  <IonItem>
-    <IonLabel>Chicles</IonLabel>
-    <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
-    {/* <IonRadio slot="start" value="buford" color="tertiary"/> */}
-  </IonItem>
-
-  <IonItem>
-    <IonLabel>Chepepatatas</IonLabel>
-    <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
-    {/* <IonRadio slot="start" value="buford" color="tertiary"/> */}
-  </IonItem>
-
-  <IonItem>
-    <IonLabel>Bombones</IonLabel>
-    <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
-    {/* <IonRadio slot="start" value="buford" color="tertiary"/> */}
-  </IonItem>
-</IonRadioGroup>
-    </IonList>
-  </IonContent>
-);
+const ProductList = () => {
+  return <IonList>
+      <IonRadioGroup slot="start" value="biff">
+        <IonListHeader>
+          <IonLabel>Productos Disponibles</IonLabel>
+        </IonListHeader>
+        {
+          availableProducts.map((name) => {
+              return <IonItem>
+                <IonLabel>{name}</IonLabel>
+                <IonButton color= "tertiary" href="/Seller">¡Quiero este Producto!</IonButton> 
+              </IonItem>
+            }
+          )
+        }
+      </IonRadioGroup>
+  </IonList>
 }
 
 export default Products;
