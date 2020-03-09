@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IonAlert, IonButton, IonContent } from '@ionic/react';
+import { colorFill } from 'ionicons/icons';
 
 const Alert: React.FC = () => {
 
@@ -12,7 +13,7 @@ const Alert: React.FC = () => {
         <IonAlert
           isOpen={showInactive}
           onDidDismiss={() => setInactive(false)}
-          header={'En este momento estoy ocupado.'}
+          header={'En este momento no estoy disponible.'}
           message={'Disculpa las molestias :c'}
           buttons={[
             {
