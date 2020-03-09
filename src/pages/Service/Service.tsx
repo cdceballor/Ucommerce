@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
-import Agenda from '../../components/Agenda';
 import Alert from '../../components/Alert';
+import ActiveBotton from '../../components/ActiveBotton';
 
 const Service: React.FC = () => {
     return (
@@ -23,27 +23,27 @@ const Servidores = ()=> {
     <IonList>
       <IonItem>
         <IonLabel>Cristian D. Ceballos</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <ActiveBotton/>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Mateo Sánchez Toro</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <ActiveBotton/>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Nicolás Roldán</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <ActiveBotton/>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Paola Vallejo</IonLabel>
-        <IonButton color="primary">Activo </IonButton>
+        <ActiveBotton/>
       </IonItem>
       <IonInput></IonInput>
       <IonItem>
         <IonLabel>Super Mario Bros</IonLabel>
-        <IonButton color="danger">Inactivo </IonButton>
+        <Alert/>
       </IonItem>
     </IonList>
 
