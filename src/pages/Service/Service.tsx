@@ -7,12 +7,7 @@ const Service: React.FC = () => {
     return (
       <IonPage>
         <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuButton />
-            </IonButtons>
-            <IonTitle>Service</IonTitle>
-          </IonToolbar>
+          <IonTitle>uCommerce</IonTitle>
         </IonHeader>
         <IonContent>
           <Servidores />
@@ -25,9 +20,6 @@ const Servidores = ()=> {
   return (
   <IonContent>
     {/*-- List of Text Items --*/}
-    <IonListHeader>
-      <IonLabel>Nombre del Proveedor de servicio</IonLabel>
-    </IonListHeader>
     <IonList>
       <IonItem>
         <IonLabel>Cristian D. Ceballos</IonLabel>
