@@ -17,7 +17,8 @@ const Activo: React.FC = () => {
 
   return (
     <IonContent>
-      <IonButton onClick={() => setShowActionSheet(true)} expand="block" mode ="ios">Activo</IonButton>
+      <IonButton onClick={() => setShowActionSheet(true)} expand="block" mode ="ios" color="tertiary" >ACTIVO</IonButton>
+
       <IonActionSheet
         isOpen={showActionSheet}
         onDidDismiss={() => setShowActionSheet(false)}
@@ -38,6 +39,7 @@ const Activo: React.FC = () => {
         }]}
       >
       </IonActionSheet>
+
     </IonContent>
   );
 }
