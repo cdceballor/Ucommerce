@@ -1,20 +1,26 @@
 ion-tab-button:hover{
     background: #216353;
+    color : #92ffe4
 }
 
 ion-tab-button:active ion-icon{
     background: #216353;
-    color: #7A4D1D;
+    color: #92ffe4;
 }
 
 
 ion-tab-button:visited{
     background: #216353;
+    color: #216353
+}
 
+ion-tab-button::selection{
+    background: #216353;
+    color: #216353
 }
 
 ion-label{
-    color:white
+    color:black
 }
 
 

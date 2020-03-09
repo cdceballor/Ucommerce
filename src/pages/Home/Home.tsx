@@ -21,12 +21,12 @@ const Home: React.FC = () => {
                 <IonGrid >
                     <IonRow>
                         <IonCol>    
-                            <IonButton className="Button" expand="block" color="light">
+                            <IonButton className="Button" expand="block" color="light" href="/service">
                                 Servicios
                             </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton className="Button" expand="block"  color="light">
+                            <IonButton className="Button" expand="block"  color="light" href="/products">
                                 Productos
                             </IonButton>
                         </IonCol>
