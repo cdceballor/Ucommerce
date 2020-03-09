@@ -17,7 +17,6 @@ const Alert: React.FC = () => {
           buttons={[
             {
               text: 'Volver',
-              role: 'cancel',
               cssClass: 'secondary',
               handler: blah => {
                 console.log('Confirma cancelación: blah');

@@ -4,8 +4,8 @@ import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox,
 import ActiveBotton from '../../components/ActiveBotton';
 import Alert from '../../components/Alert';
 
-
 const Seller: React.FC = () => {
+
     return (
       <IonPage>
         <IonHeader>

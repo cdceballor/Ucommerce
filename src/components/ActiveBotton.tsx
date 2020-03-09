@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { IonActionSheet, IonContent, IonButton } from '@ionic/react';
 import Agenda from '../components/Agenda';
+import Alert from '../components/Alert';
 
 const ActiveBotton: React.FC = () => {
   return (
