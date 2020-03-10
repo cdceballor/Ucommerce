@@ -18,12 +18,8 @@ const Alert: React.FC = () => {
           message={'Disculpa las molestias :c'}
           buttons={[
             {
-<<<<<<< HEAD
-              text: 'Volver',
-=======
               text: 'Cancel',
               role: 'cancel',
->>>>>>> c3d7bacfba3143de3bb049f1c57d32073f6f60ee
               cssClass: 'secondary',
               handler: () => {
                 console.log('Confirm Cancel');

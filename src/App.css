@@ -5,21 +5,15 @@ ion-tab-button:focus ion-icon{
     background: #216353;
     color : #7A4D1D
 }
-
-
-
 ion-tab-bar{
     background: #216353;
 }
-
 ion-tab-button{
     background: #216353;
 }
-
 ion-label {
     color: white;
 }
-
 ion-icon{
     color: whitesmoke;
     margin: auto;
