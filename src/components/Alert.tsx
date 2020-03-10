@@ -11,14 +11,14 @@ const Alert: React.FC = () => {
         <IonButton onClick={() => setInactive(true)} expand="block" color="danger">Inactivo</IonButton>
 
         <IonAlert
-          
+
           isOpen={showInactive}
           onDidDismiss={() => setInactive(false)}
           header={'En este momento no estoy disponible.'}
           message={'Disculpa las molestias :c'}
           buttons={[
             {
-              text: 'Cancel',
+              text: 'Volver',
               role: 'cancel',
               cssClass: 'secondary',
               handler: () => {
