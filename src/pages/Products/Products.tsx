@@ -47,9 +47,6 @@ const Servidores = () => {
 };
 
 const ProductList = () => {
-  {
-    /*-- List of Input Items --*/
-  }
   return (
     <IonList>
       <IonRadioGroup slot="start" value="biff">
