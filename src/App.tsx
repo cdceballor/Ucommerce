@@ -56,26 +56,27 @@ const App: React.FC = () => (
         </IonHeader>
 
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/Home" className="style">
-            <IonIcon icon={square} />
-            <IonLabel color="grey">Home</IonLabel>
-          </IonTabButton>
+            
+            <IonTabButton tab="tab1" href="/Home" className="style">
+              <IonIcon icon={square} />
+              <IonLabel color="grey">Home</IonLabel>
+            </IonTabButton>
 
-          <IonTabButton tab="tab2" href="/Products">
-            <IonIcon icon={square} />
-            <IonLabel color="grey">Products</IonLabel>
-          </IonTabButton>
+            <IonTabButton tab="tab2" href="/Products">
+              <IonIcon icon={square} />
+              <IonLabel color="grey">Products</IonLabel>
+            </IonTabButton>
 
-          <IonTabButton tab="tab3" href="/Service">
-            <IonIcon icon={square} />
-            <IonLabel color="grey">Service</IonLabel>
-          </IonTabButton>
+            <IonTabButton tab="tab3" href="/Service">
+              <IonIcon icon={square} />
+              <IonLabel color="grey">Service</IonLabel>
+            </IonTabButton>
 
-          <IonTabButton tab="tab4" href="/seller">
-            <IonIcon icon={square} />
-            <IonLabel color="grey">Sellers</IonLabel>
+            <IonTabButton tab="tab4" href="/seller">
+              <IonIcon icon={square} />
+              <IonLabel color="grey">Sellers</IonLabel>
 
-          </IonTabButton>
+            </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>

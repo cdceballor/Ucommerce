@@ -14,10 +14,10 @@ ion-tab-button:visited{
     color: #216353
 }
 
-ion-tab-button::selection{
+/* ion-tab-button:selection{
     background: #216353;
     color: #216353
-}
+} */
 
 ion-label{
     color:black

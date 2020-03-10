@@ -38,7 +38,7 @@ const Servidores = () => {
   console.log(availableProducts);
   return (
     <IonContent>
-      <IonButton className="label" expand="full" color="secondary">
+      <IonButton className="label" expand="full" color="secondary" disabled>
         Products
       </IonButton>
       <ProductList />
