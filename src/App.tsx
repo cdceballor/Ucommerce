@@ -59,24 +59,24 @@ const App: React.FC = () => (
             
             <IonTabButton tab="tab1" href="/Home" className="style">
               <IonIcon icon={square} />
-              <IonLabel color="grey">Home</IonLabel>
+              <IonLabel >Home</IonLabel>
             </IonTabButton>
 
             <IonTabButton tab="tab2" href="/Products">
               <IonIcon icon={square} />
-              <IonLabel color="grey">Products</IonLabel>
+              <IonLabel >Products</IonLabel>
             </IonTabButton>
 
             <IonTabButton tab="tab3" href="/Service">
               <IonIcon icon={square} />
-              <IonLabel color="grey">Service</IonLabel>
+              <IonLabel >Service</IonLabel>
             </IonTabButton>
 
             <IonTabButton tab="tab4" href="/seller">
               <IonIcon icon={square} />
-              <IonLabel color="grey">Sellers</IonLabel>
-
+              <IonLabel >Sellers</IonLabel>
             </IonTabButton>
+            
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
