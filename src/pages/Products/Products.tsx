@@ -28,19 +28,15 @@ const Products: React.FC = () => {
         <IonTitle>uCommerce</IonTitle>
       </IonHeader>
       <IonContent>
-        <Servidores />
+        <Servidores/>
       </IonContent>
     </IonPage>
   );
 };
 
 const Servidores = () => {
-  console.log(availableProducts);
   return (
     <IonContent>
-      <IonButton className="label" expand="full" color="secondary" disabled>
-        Products
-      </IonButton>
       <ProductList />
     </IonContent>
   );

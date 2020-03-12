@@ -12,17 +12,21 @@ import {
   IonButton,
   IonLabel,
   IonAvatar,
-  IonChip,
-  IonItem
+  IonItem,
+  IonIcon
 } from "@ionic/react";
 import "./Home.css";
+import { person, home, square } from "ionicons/icons";
+import Button from './../../components/Button';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent color="primary">
         <IonHeader>
-          <IonTitle>uCommerce</IonTitle>
+          <IonTitle>uCommerce
+          <IonButton href="/home" color="secondary" align-right> <IonIcon icon={person}/></IonButton>
+          </IonTitle>
         </IonHeader>
 
         <IonSearchbar className="my-searchbar center"></IonSearchbar>
@@ -31,12 +35,12 @@ const Home: React.FC = () => {
           <IonGrid>
             <IonRow>
               <IonCol>
-                <IonButton className="Button" expand="block" color="light">
+                <IonButton href="/service" className="Button" expand="block" color="light">
                   Servicios
                 </IonButton>
               </IonCol>
               <IonCol>
-                <IonButton className="Button" expand="block" color="light">
+                <IonButton href="/products" className="Button" expand="block" color="light">
                   Productos
                 </IonButton>
               </IonCol>
