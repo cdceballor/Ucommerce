@@ -1,14 +1,16 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader,IonButton } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonInput, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage } from '@ionic/react';
 import Alert from '../../components/Alert';
 import ActiveBotton from '../../components/ActiveBotton';
+
+/* Components */
+
+import Header from "../../components/Header/Header"
 
 const Service: React.FC = () => {
     return (
       <IonPage>
-        <IonHeader>
-          <IonTitle>uCommerce</IonTitle>
-        </IonHeader>
+        <Header/>
         <IonContent>
           <Servidores />
         </IonContent>

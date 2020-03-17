@@ -1,18 +1,15 @@
-import { IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonIcon, IonItem, IonList, IonPage} from '@ionic/react';
 import { americanFootball, basketball, beer, bluetooth, boat, build, flask, football, paperPlane, wifi, pizza } from 'ionicons/icons';
 import React from 'react';
+
+/* Components */
+
+import Header from "../../components/Header/Header"
 
 const Inventario: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>Inventario</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header/>
       <IonContent>
         <ListItems />
       </IonContent>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { IonAlert, IonButton, IonContent } from '@ionic/react';
-import { colorFill } from 'ionicons/icons';
 
 const Alert: React.FC = () => {
 

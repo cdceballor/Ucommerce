@@ -8,8 +8,6 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  IonTitle,
-  IonHeader
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { square } from "ionicons/icons";
@@ -39,6 +37,11 @@ import Products from "./pages/Products/Products";
 import Service from "./pages/Service/Service";
 import Seller from "./pages/Seller/Seller";
 
+
+/* Components */
+
+import Header from "./components/Header/Header"
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -51,10 +54,8 @@ const App: React.FC = () => (
           <Route path="/" render={() => <Redirect to="/Home" />} exact={true} />
         </IonRouterOutlet>
 
-        <IonHeader>
-          <IonTitle>uCommerce</IonTitle>
-        </IonHeader>
-
+        <Header></Header>
+        
         <IonTabBar slot="bottom">
             
             <IonTabButton tab="tab1" href="/Home" className="style">

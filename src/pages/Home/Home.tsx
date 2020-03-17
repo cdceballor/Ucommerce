@@ -1,9 +1,7 @@
 import React from "react";
 import {
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
   IonSearchbar,
   IonCard,
   IonGrid,
@@ -12,22 +10,20 @@ import {
   IonButton,
   IonLabel,
   IonAvatar,
-  IonItem,
-  IonIcon
+  IonItem
 } from "@ionic/react";
 import "./Home.css";
-import { person, home, square } from "ionicons/icons";
-import Button from './../../components/Button';
+
+/* Components */
+
+import Header from "../../components/Header/Header"
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent color="primary">
-        <IonHeader>
-          <IonTitle>uCommerce
-          <IonButton href="/home" color="secondary" align-right> <IonIcon icon={person}/></IonButton>
-          </IonTitle>
-        </IonHeader>
+        
+        <Header/>
 
         <IonSearchbar className="my-searchbar center"></IonSearchbar>
 
@@ -55,25 +51,25 @@ const Home: React.FC = () => {
 
           <IonItem>
             <IonAvatar slot="start">
-              <img src="https://media.mercola.com/assets/images/foodfacts/mango-nutrition-facts.jpg" />
+              <img src="https://media.mercola.com/assets/images/foodfacts/mango-nutrition-facts.jpg" alt="Mango" />
             </IonAvatar>
             <IonLabel>Mango</IonLabel>
           </IonItem>
           <IonItem>
             <IonAvatar slot="start">
-              <img src="https://cdn2.cocinadelirante.com/sites/default/files/images/2017/03/gomitascaseras.jpg" />
+              <img src="https://cdn2.cocinadelirante.com/sites/default/files/images/2017/03/gomitascaseras.jpg"  alt="Gomitas" />
             </IonAvatar>
             <IonLabel>Gomitas</IonLabel>
           </IonItem>
           <IonItem>
             <IonAvatar slot="start">
-              <img src="https://http2.mlstatic.com/jet-burbujas-x-12-unidades-D_NQ_NP_900207-MCO29934945457_042019-F.jpg" />
+              <img src="https://http2.mlstatic.com/jet-burbujas-x-12-unidades-D_NQ_NP_900207-MCO29934945457_042019-F.jpg" alt="Burbujas jet" />
             </IonAvatar>
             <IonLabel>Burbujas Jet</IonLabel>
           </IonItem>
           <IonItem>
             <IonAvatar slot="start">
-              <img src="https://www.lacasadelasgolosinas.com/4484-large_default/chicles-trident-fresh-formato-gragea-sabor-menta.jpg" />
+              <img src="https://www.lacasadelasgolosinas.com/4484-large_default/chicles-trident-fresh-formato-gragea-sabor-menta.jpg" alt="Chicles" />
             </IonAvatar>
             <IonLabel>Chicles</IonLabel>
           </IonItem>

@@ -1,16 +1,18 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonRadioGroup, IonListHeader, IonPage, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonHeader, IonButton  } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonInput, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonPage} from '@ionic/react';
 
 import ActiveBotton from '../../components/ActiveBotton';
 import Alert from '../../components/Alert';
+
+/* Components */
+
+import Header from "../../components/Header/Header"
 
 const Seller: React.FC = () => {
 
     return (
       <IonPage>
-        <IonHeader>
-          <IonTitle>uCommerce</IonTitle>
-        </IonHeader>
+        <Header/>
         <IonContent>
           <Vendedor />
         </IonContent>

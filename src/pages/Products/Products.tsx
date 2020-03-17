@@ -7,10 +7,12 @@ import {
   IonRadioGroup,
   IonListHeader,
   IonPage,
-  IonTitle,
-  IonHeader,
   IonButton
 } from "@ionic/react";
+
+/* Components */
+
+import Header from "../../components/Header/Header"
 
 const availableProducts = [
   "Mango biche",
@@ -24,9 +26,7 @@ const availableProducts = [
 const Products: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonTitle>uCommerce</IonTitle>
-      </IonHeader>
+      <Header/>
       <IonContent>
         <Servidores/>
       </IonContent>

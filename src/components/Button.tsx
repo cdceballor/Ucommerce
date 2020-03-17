@@ -2,8 +2,8 @@ import React from 'react';
 
 import { IonButton, IonContent } from '@ionic/react';
 
- const Button: React.FC = () => {
-   return (
+const Button: React.FC = () => {
+    return (
     <IonContent>
       <MyBtn/>
     </IonContent>
