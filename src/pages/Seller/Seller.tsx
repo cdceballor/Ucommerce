@@ -1,7 +1,7 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonInput, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonPage} from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonItemSliding, IonItemOption, IonItemOptions, IonContent, IonPage} from '@ionic/react';
 
-import ActiveBotton from '../../components/ActiveBotton';
+import ActiveBotton from '../../components/ActiveButton';
 import Alert from '../../components/Alert';
 
 /* Components */
@@ -29,25 +29,13 @@ const Vendedor = ()=> {
         <IonLabel>Cristian D. Ceballos</IonLabel>
         < ActiveBotton />
       </IonItem>
-      <IonInput></IonInput>
       <IonItem>
         <IonLabel>Mateo Sánchez Toro</IonLabel>
         <Alert />
       </IonItem>
-      <IonInput></IonInput>
       <IonItem>
         <IonLabel>Nicolás Roldán</IonLabel>
         <Alert />
-      </IonItem>
-      <IonInput></IonInput>
-      <IonItem>
-        <IonLabel>Paola Vallejo</IonLabel>
-        <ActiveBotton />
-      </IonItem>
-      <IonInput></IonInput>
-      <IonItem>
-        <IonLabel>Super Mario Bros</IonLabel>
-        <ActiveBotton />
       </IonItem>
     </IonList>
 {/*--------------------------------------------------------------*/}

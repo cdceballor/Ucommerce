@@ -5,7 +5,6 @@ import {
   IonLabel,
   IonContent,
   IonRadioGroup,
-  IonListHeader,
   IonPage,
   IonButton
 } from "@ionic/react";
@@ -28,30 +27,19 @@ const Products: React.FC = () => {
     <IonPage>
       <Header/>
       <IonContent>
-        <Servidores/>
+        <ProductList/>
       </IonContent>
     </IonPage>
-  );
-};
-
-const Servidores = () => {
-  return (
-    <IonContent>
-      <ProductList />
-    </IonContent>
   );
 };
 
 const ProductList = () => {
   return (
     <IonList>
-      <IonRadioGroup slot="start" value="biff">
-        <IonListHeader>
-          <IonLabel>Productos Disponibles</IonLabel>
-        </IonListHeader>
+      <IonRadioGroup slot="start" value="biff" key="1">
         {availableProducts.map(name => {
           return (
-            <IonItem>
+            <IonItem key={name}>
               <IonLabel>{name}</IonLabel>
               <IonButton color="tertiary" href="/Seller">
                 ¡Quiero este Producto!

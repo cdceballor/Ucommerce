@@ -18,6 +18,28 @@ import "./Home.css";
 
 import Header from "../../components/Header/Header"
 
+
+const topProducts = {
+  data : [
+    {
+      name : "Mango",
+      img : "https://media.mercola.com/assets/images/foodfacts/mango-nutrition-facts.jpg"
+    },
+    {
+      name : "Gomitas",
+      img : "https://cdn2.cocinadelirante.com/sites/default/files/images/2017/03/gomitascaseras.jpg"
+    },
+    {
+      name : "Burbujas jet",
+      img : "https://http2.mlstatic.com/jet-burbujas-x-12-unidades-D_NQ_NP_900207-MCO29934945457_042019-F.jpg"
+    },
+    {
+      name : "Chicles",
+      img : "https://www.lacasadelasgolosinas.com/4484-large_default/chicles-trident-fresh-formato-gragea-sabor-menta.jpg"
+    }
+  ]
+}
+
 const Home: React.FC = () => {
   return (
     <IonPage>
@@ -46,39 +68,39 @@ const Home: React.FC = () => {
                 <IonLabel color="light">Destacados</IonLabel>
               </IonCol>
             </IonRow>
+
+            <TopList/>
+
           </IonGrid>
-
-
-          <IonItem>
-            <IonAvatar slot="start">
-              <img src="https://media.mercola.com/assets/images/foodfacts/mango-nutrition-facts.jpg" alt="Mango" />
-            </IonAvatar>
-            <IonLabel>Mango</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonAvatar slot="start">
-              <img src="https://cdn2.cocinadelirante.com/sites/default/files/images/2017/03/gomitascaseras.jpg"  alt="Gomitas" />
-            </IonAvatar>
-            <IonLabel>Gomitas</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonAvatar slot="start">
-              <img src="https://http2.mlstatic.com/jet-burbujas-x-12-unidades-D_NQ_NP_900207-MCO29934945457_042019-F.jpg" alt="Burbujas jet" />
-            </IonAvatar>
-            <IonLabel>Burbujas Jet</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonAvatar slot="start">
-              <img src="https://www.lacasadelasgolosinas.com/4484-large_default/chicles-trident-fresh-formato-gragea-sabor-menta.jpg" alt="Chicles" />
-            </IonAvatar>
-            <IonLabel>Chicles</IonLabel>
-          </IonItem>
-
 
         </IonCard>
       </IonContent>
+
     </IonPage>
   );
 };
+
+const TopList = () => {
+  return (
+    <div>
+      {
+        topProducts.data.map((obj, i) => {
+          return (
+          <IonRow key = {i}>
+            <IonCol>
+              <IonItem key={obj.name}>
+                <IonAvatar slot="start">
+                  <img src={obj.img} alt={obj.name} />
+                </IonAvatar>
+                {obj.name}
+              </IonItem>
+            </IonCol>
+          </IonRow>
+          )
+        })
+      }
+    </div>
+  )
+}
 
 export default Home;

@@ -7,13 +7,13 @@ const Alert: React.FC = () => {
 
     return (
       <IonContent>
-        <IonButton onClick={() => setInactive(true)} expand="block" color="danger">Inactivo</IonButton>
+        <IonButton onClick={() => setInactive(true)} expand="block" color="danger">No disponible</IonButton>
 
         <IonAlert
           isOpen={showInactive}
           onDidDismiss={() => setInactive(false)}
           header={'En este momento no estoy disponible.'}
-          message={'Disculpa las molestias :c'}
+          message={'Disculpa las molestias'}
           buttons={[
             {
               text: 'Volver',
