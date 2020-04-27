@@ -36,6 +36,7 @@ import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import Service from "./pages/Service/Service";
 import Seller from "./pages/Seller/Seller";
+import User from "./pages/User/User"
 
 
 /* Components */
@@ -51,6 +52,7 @@ const App: React.FC = () => (
           <Route path="/Products" component={Products} exact={true} />
           <Route path="/Service" component={Service} exact={true} />
           <Route path="/Seller" component={Seller} exact={true} />
+          <Route path="/User" component={User} exact={true} />
           <Route path="/" render={() => <Redirect to="/Home" />} exact={true} />
         </IonRouterOutlet>
 
