@@ -12,7 +12,7 @@ import {
   IonAvatar,
   IonItem
 } from "@ionic/react";
-
+import "./User.css";
 
 /* Components */
 
@@ -59,20 +59,20 @@ const user: React.FC = () => {
 const TopList = () => {
   return (
     <div>
-      {
+      { 
         profile.data.map((obj, i) => {
           return (
           <IonRow>
             <IonCol>
               <IonItem key={obj.name}>
-                <IonAvatar slot="start">
+                <IonAvatar className='avatar' >
                   <img src={obj.img}  alt={obj.name} />
                 </IonAvatar>
               </IonItem>
                 <IonItem>
                   <IonRow>
                     <IonCol>
-                    Nombre:  {obj.name}
+                    <p className='data'>Nombre:  {obj.name}</p>
                     </IonCol>
                   </IonRow>
                 </IonItem>

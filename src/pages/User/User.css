@@ -1,0 +1,15 @@
+.avatar{
+width: 150px;
+height: 150px;
+display: table;
+margin: auto;
+margin-top: 15px;
+margin-bottom: 15px;
+text-align: center;
+}
+
+.data{
+    display: table;
+    margin: auto;
+    text-align: center;
+}
