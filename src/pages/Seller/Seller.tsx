@@ -13,7 +13,8 @@ const sellers = {
   data : [
     {
       name : 'Cristian D. Ceballos',
-      available : "Disponible"
+      available : "Disponible",
+      phone : "3234784442",
     },
     {
       name : 'Mateo Sánchez Toro',
@@ -21,7 +22,8 @@ const sellers = {
     },
     {
       name : 'Nicolás Roldán',
-      available : "No disponible"
+      available : "No disponible",
+      phone: "3127734438"
     }
   ]
 }
@@ -60,8 +62,8 @@ const Vendedor = ()=> {
 const Available = (obj: any) => {
   if (obj.obj.available === "Disponible") {
     return (
-      <IonButton color="tertiary">
-        Disponible
+      <IonButton color="tertiary" href="https://api.whatsapp.com/send?phone=57" + {...obj.obj.phone} +"&text=Hola,quiero%20comprarte%20un%20producto."> 
+        Contactar
       </IonButton>
     )
   }

@@ -8,7 +8,8 @@ import {
   IonCol,
   IonLabel,
   IonAvatar,
-  IonItem
+  IonItem,
+  IonIcon
 } from "@ionic/react";
 import "./User.css";
 
@@ -46,6 +47,7 @@ const user: React.FC = () => {
               <IonCol>
                   <IonAvatar className='avatar' >
                     <img src={profile.img}  alt={profile.name} />
+                    <IonIcon>create</IonIcon>
                   </IonAvatar>
               </IonCol>
             </IonRow>
