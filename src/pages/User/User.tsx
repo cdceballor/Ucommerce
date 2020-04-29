@@ -20,7 +20,10 @@ import Header from "../../components/Header/Header"
 const profile = {
   name : "Pablo Pineda",
   email: "pablo@mail.com",
-  img : "https://lgfstatic.com/2015/conversions/virtudes-de-una-persona-large.jpg"
+  img : "https://lgfstatic.com/2015/conversions/virtudes-de-una-persona-large.jpg",
+  phone : "3127734437",
+  gender : "Masculino",
+  birthDate: "15/01/1998",
 }
 
 const user: React.FC = () => {
@@ -67,6 +70,35 @@ const user: React.FC = () => {
               </IonCol>
           </IonRow>
 
+          <IonRow>
+              <IonCol>
+                <IonRow>
+                  <IonCol className="data">
+                  Telefono:  {profile.phone}
+                  </IonCol>
+                </IonRow>
+              </IonCol>
+          </IonRow>
+
+          <IonRow>
+              <IonCol>
+                <IonRow>
+                  <IonCol className="data">
+                  Genereo:  {profile.gender}
+                  </IonCol>
+                </IonRow>
+              </IonCol>
+          </IonRow>
+
+          <IonRow>
+              <IonCol>
+                <IonRow>
+                  <IonCol className="data">
+                  Fecha de nacimiento:  {profile.birthDate}
+                  </IonCol>
+                </IonRow>
+              </IonCol>
+          </IonRow>
           </IonGrid>
 
         </IonCard>
