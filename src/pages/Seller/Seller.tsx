@@ -60,9 +60,10 @@ const Vendedor = ()=> {
 }
 
 const Available = (obj: any) => {
+  const phone = "https://api.whatsapp.com/send?phone=57" + obj.obj.phone + "&text=Hola,quiero%20comprarte%20un%20producto."
   if (obj.obj.available === "Disponible") {
     return (
-      <IonButton color="tertiary" href="https://api.whatsapp.com/send?phone=57" + {...obj.obj.phone} +"&text=Hola,quiero%20comprarte%20un%20producto."> 
+      <IonButton color="tertiary" href={phone} target="blank"> 
         Contactar
       </IonButton>
     )
