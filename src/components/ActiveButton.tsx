@@ -1,19 +1,8 @@
 import React, { useState } from 'react'
 import { IonActionSheet, IonContent, IonButton } from '@ionic/react';
 
-const ActiveBotton: React.FC = () => {
-  return (
-    <IonContent>
-      <Activo />
-    </IonContent>
-
-  )
-}
-
-const Activo: React.FC = () => {
-
+const ActiveButton: React.FC = () => {
   const [showActionSheet, setShowActionSheet] = useState(false);
-
   return (
     <IonContent>
       <IonButton onClick={() => setShowActionSheet(true)} expand="block" mode ="ios" color="tertiary">Disponible</IonButton>
@@ -38,9 +27,8 @@ const Activo: React.FC = () => {
         }]}
       >
       </IonActionSheet>
-
     </IonContent>
-  );
-}
 
-export default ActiveBotton;
+  )
+}
+export default ActiveButton;

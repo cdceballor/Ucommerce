@@ -13,10 +13,14 @@
 .my-searchbar{
   width: 50%;
 }
+ion-list{
+  width: 100% !important;
+}
+
+
 ion-card{
   color: black;
   text-align: center;
-  background: white;
   border-radius: 0%;
 }
 ion-title{
@@ -28,5 +32,6 @@ ion-toolbar{
   margin-top: 20px;
 }
 .label{
+  margin: 0.5rem;
   background: #216353;
 }

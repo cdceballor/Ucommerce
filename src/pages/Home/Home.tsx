@@ -10,7 +10,9 @@ import {
   IonButton,
   IonLabel,
   IonAvatar,
-  IonItem
+  IonItem,
+  IonList,
+  IonListHeader
 } from "@ionic/react";
 import "./Home.css";
 
@@ -63,15 +65,9 @@ const Home: React.FC = () => {
                 </IonButton>
               </IonCol>
             </IonRow>
-            <IonRow>
-              <IonCol className="label">
-                <IonLabel color="light">Destacados</IonLabel>
-              </IonCol>
-            </IonRow>
-
-            <TopList/>
-
           </IonGrid>
+
+          <TopList/>
 
         </IonCard>
       </IonContent>
@@ -82,24 +78,27 @@ const Home: React.FC = () => {
 
 const TopList = () => {
   return (
-    <div>
+    <IonList className="center">
+      <IonListHeader className="center">
+        <IonLabel>
+          <h3>Destacados</h3>
+        </IonLabel>
+      </IonListHeader>
       {
         topProducts.data.map((obj, i) => {
           return (
-          <IonRow key = {i}>
-            <IonCol>
-              <IonItem key={obj.name}>
-                <IonAvatar slot="start">
-                  <img src={obj.img} alt={obj.name} />
-                </IonAvatar>
-                {obj.name}
-              </IonItem>
-            </IonCol>
-          </IonRow>
+          <IonItem key={obj.name}>
+            <IonAvatar slot="start">
+              <img src={obj.img} alt={obj.name} />
+            </IonAvatar>
+            <IonLabel>
+              <h2>{obj.name}</h2>
+            </IonLabel>
+          </IonItem>
           )
         })
       }
-    </div>
+    </IonList>
   )
 }
 

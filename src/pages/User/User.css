@@ -2,7 +2,7 @@
 width: 150px;
 height: 150px;
 display: table;
-margin: auto;
+margin: 0 auto;
 margin-top: 15px;
 margin-bottom: 15px;
 text-align: center;
@@ -10,6 +10,8 @@ text-align: center;
 
 .data{
     display: table;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
+    background: white;
+    color: black;
 }

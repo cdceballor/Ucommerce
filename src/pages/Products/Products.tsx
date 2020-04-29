@@ -6,28 +6,51 @@ import {
   IonContent,
   IonRadioGroup,
   IonPage,
-  IonButton
+  IonButton,
+  IonCard
 } from "@ionic/react";
 
 /* Components */
 
 import Header from "../../components/Header/Header"
 
-const availableProducts = [
-  "Mango biche",
-  "Gomitas",
-  "Burbujas jet",
-  "Chicles",
-  "Chepe patatas",
-  "Bombones"
-];
+const availableProducts = {
+  data : [
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Mango biche'
+    },
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Gomitas'
+    },
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Burbujas jet'
+    },
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Chicles'
+    },
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Chepe patatas'
+    },
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Bombones'
+    }
+  ]
+}
 
 const Products: React.FC = () => {
   return (
     <IonPage>
       <Header/>
-      <IonContent>
-        <ProductList/>
+      <IonContent color="primary">
+        <IonCard className="center" color="secondary">
+          <ProductList/>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
@@ -35,12 +58,12 @@ const Products: React.FC = () => {
 
 const ProductList = () => {
   return (
-    <IonList>
+    <IonList color="secondary">
       <IonRadioGroup slot="start" value="biff" key="1">
-        {availableProducts.map(name => {
+        {availableProducts.data.map((obj, i) => {
           return (
-            <IonItem key={name}>
-              <IonLabel>{name}</IonLabel>
+            <IonItem key={obj.id}>
+              <IonLabel>{obj.name}</IonLabel>
               <IonButton color="tertiary" href="/Seller">
                 ¡Quiero este Producto!
               </IonButton>

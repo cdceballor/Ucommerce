@@ -2,12 +2,10 @@ import React from "react";
 import {
   IonContent,
   IonPage,
-  IonSearchbar,
   IonCard,
   IonGrid,
   IonRow,
   IonCol,
-  IonButton,
   IonLabel,
   IonAvatar,
   IonItem
@@ -20,13 +18,9 @@ import Header from "../../components/Header/Header"
 
 
 const profile = {
-  data : [
-    {
-      name : "Pablo Pineda",
-      email: "pablo@mail.com",
-      img : "https://lgfstatic.com/2015/conversions/virtudes-de-una-persona-large.jpg"
-    },
-  ]
+  name : "Pablo Pineda",
+  email: "pablo@mail.com",
+  img : "https://lgfstatic.com/2015/conversions/virtudes-de-una-persona-large.jpg"
 }
 
 const user: React.FC = () => {
@@ -45,7 +39,33 @@ const user: React.FC = () => {
               </IonCol>
             </IonRow>
 
-            <TopList/>
+            <IonRow>
+              <IonCol>
+                  <IonAvatar className='avatar' >
+                    <img src={profile.img}  alt={profile.name} />
+                  </IonAvatar>
+              </IonCol>
+            </IonRow>
+
+            <IonRow>
+              <IonCol>
+                <IonRow>
+                  <IonCol className="data">
+                  Nombre:  {profile.name}
+                  </IonCol>
+                </IonRow>
+              </IonCol>
+            </IonRow>
+
+            <IonRow>
+              <IonCol>
+                <IonRow>
+                  <IonCol className="data">
+                  Email:  {profile.email}
+                  </IonCol>
+                </IonRow>
+              </IonCol>
+          </IonRow>
 
           </IonGrid>
 
@@ -55,43 +75,5 @@ const user: React.FC = () => {
     </IonPage>
   );
 };
-
-const TopList = () => {
-  return (
-    <div>
-      { 
-        profile.data.map((obj, i) => {
-          return (
-          <IonRow>
-            <IonCol>
-              <IonItem key={obj.name}>
-                <IonAvatar className='avatar' >
-                  <img src={obj.img}  alt={obj.name} />
-                </IonAvatar>
-              </IonItem>
-                <IonItem>
-                  <IonRow>
-                    <IonCol>
-                    <p className='data'>Nombre:  {obj.name}</p>
-                    </IonCol>
-                  </IonRow>
-                </IonItem>
-
-                <IonItem>
-                  <IonRow>
-                    <IonCol>
-                    Email:  {obj.email}
-                    </IonCol>
-                  </IonRow>
-                </IonItem>
-                
-            </IonCol>
-          </IonRow>
-          )
-        })
-      }
-    </div>
-  )
-}
 
 export default user;

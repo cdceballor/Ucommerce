@@ -1,42 +1,56 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonContent, IonPage } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonContent, IonPage, IonButton } from '@ionic/react';
 import ActiveButton from '../../components/ActiveButton';
 
 /* Components */
 
 import Header from "../../components/Header/Header"
 
-const Service: React.FC = () => {
-    return (
-      <IonPage>
-        <Header/>
-        <IonContent>
-          <Servidores />
-        </IonContent>
-      </IonPage>
-    );
-  };
-
-const Servidores = ()=> {
-  return (
-  <IonContent>
-    {/*-- List of Text Items --*/}
-    <IonList>
-      <IonItem>
-        <IonLabel>Cristian D. Ceballos</IonLabel>
-        <ActiveButton/>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Mateo Sánchez Toro</IonLabel>
-        <ActiveButton/>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Nicolás Roldán</IonLabel>
-        <ActiveButton/>
-      </IonItem>
-    </IonList>
-  </IonContent>
-);
+const availableServices = {
+  data : [
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Clase matemáticas'
+    },
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Asesoría PI1'
+    },
+    {
+      id : Math.floor(Math.random()*100 + 1),
+      name : 'Clase cálculo 1'
+    }
+  ]
 }
+
+const Service: React.FC = () => {
+  return (
+    <IonPage>
+      <Header/>
+      <IonContent>
+        <ServiceList/>
+      </IonContent>
+    </IonPage>
+  );
+};
+
+const ServiceList = () => {
+  return (
+    <IonList>
+      {
+        availableServices.data.map((obj, i) => {
+          return (
+            <IonItem key={obj.id}>
+              <IonLabel>{obj.name}</IonLabel>
+              <IonButton color="tertiary" href="/Seller">
+                ¡Quiero este Servicio!
+              </IonButton>
+            </IonItem>
+          );
+        })
+      }
+    </IonList>
+  );
+};
 
 export default Service;
