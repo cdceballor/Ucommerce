@@ -18,11 +18,12 @@ const sellers = {
     },
     {
       name : 'Mateo Sánchez Toro',
-      available : "No disponible"
+      available : "No disponible",
+      phone : "3008057306"
     },
     {
       name : 'Nicolás Roldán',
-      available : "No disponible",
+      available : "Disponible",
       phone: "3127734438"
     }
   ]
