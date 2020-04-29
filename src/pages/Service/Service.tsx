@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonContent, IonPage, IonButton } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonContent, IonPage, IonButton, IonCard } from '@ionic/react';
 import ActiveButton from '../../components/ActiveButton';
 
 /* Components */
@@ -27,8 +27,10 @@ const Service: React.FC = () => {
   return (
     <IonPage>
       <Header/>
-      <IonContent>
-        <ServiceList/>
+      <IonContent color="primary">
+        <IonCard className="center">
+          <ServiceList/>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
